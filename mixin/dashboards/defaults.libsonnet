@@ -2,7 +2,7 @@ local utils = import '../lib/utils.libsonnet';
 {
   local thanos = self,
   local grafanaDashboards = super.grafanaDashboards,
-  local grafana = import 'grafonnet/grafana.libsonnet',
+  local grafana = import 'github.com/grafana/grafonnet-lib/grafonnet/grafana.libsonnet',
   local template = grafana.template,
 
   dashboard:: {

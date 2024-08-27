@@ -15,7 +15,7 @@ local utils = import '../lib/utils.libsonnet';
     },
   },
   grafanaDashboards+:: {
-    local grafana = import 'grafonnet/grafana.libsonnet',
+    local grafana = import 'github.com/grafana/grafonnet-lib/grafonnet/grafana.libsonnet',
     local template = grafana.template,
     [if thanos.receive != null then 'receive.json']:
       local receiveHandlerSelector = utils.joinLabels([thanos.receive.dashboard.selector, 'handler="receive"']);
